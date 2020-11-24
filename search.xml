@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>In61项目文档</title>
+      <link href="2020/11/24/In61%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/"/>
+      <url>2020/11/24/In61%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/</url>
+      
+        <content type="html"><![CDATA[<p>&gt; 一个面向全体六安一中师生的小程序，旨在让校园生活更加丰富有趣，也希望可以帮助同学们学习进步，让老师工作顺利</p><p><strong>## 一、功能设计（暂定）</strong></p><p><strong>### 主页</strong></p><p>+ 学校信息</p><p>+ 事务公开</p><p>+ 优秀教师</p><p>+ 优秀毕业生</p><p>+ 电话簿</p><p><strong>### 班级</strong></p><p>+ 班级介绍</p><p>+ 班级荣誉墙</p><p>+ 班级作业</p><p>+ 班级通讯录</p><p><strong>### 应用</strong></p><p>+ 表白墙</p><p>+ 寻物启事</p><p>+ 互帮互助</p><p>+ 吐槽</p><p>+ 二手市场</p><p><strong>## 二、人员需求</strong></p><p><strong>#### 管理组</strong></p><p>+ <strong><em>\</em>项目管理**</strong>——协调各组工作</p><p>+ <strong><em>\</em>人事管理**</strong>——处理新来的同学</p><p><strong>#### 产品组（需要有脑洞的同学们来参加）</strong></p><p>+ <strong><em>\</em>用户需求**</strong>——学生和老师需要些什么</p><p>+ <strong><em>\</em>功能设计**</strong>——根据需求设定功能</p><p><strong>#### 设计组（需要有设计基础的同学的帮助）</strong></p><p>+ <strong><em>\</em>页面布局**</strong></p><p>+ <strong><em>\</em>图标**</strong></p><p>+ <strong><em>\</em>交互动画**</strong></p><p><strong>#### 开发组（程序员——需要有开发经验或者开发能力的同学的帮助）</strong></p><p>+ <strong><em>\</em>前端**</strong>：vue.js、微信小程序</p><p>+ <strong><em>\</em>后端**</strong>：node.js </p><p><strong>#### 测试组（需要有耐心去发现产品的问题）</strong></p><p>+ <strong><em>\</em>内测进行反馈**</strong>,内测反馈的问题解决完毕之后便进行公测</p><p><strong>#### 售后组（需要有足够的时候接受用户反馈并且维护社区）</strong></p><p>+ <strong><em>\</em>用户信息反馈**</strong></p><p>+ <strong><em>\</em>社区管理员维护**</strong></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 开发记录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2020 - 1024 = 996</title>
       <link href="2020/10/24/blog-1024/"/>
       <url>2020/10/24/blog-1024/</url>
