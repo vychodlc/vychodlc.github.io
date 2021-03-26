@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>面经-0326</title>
+      <link href="2021/03/26/interviewEXP-0326/"/>
+      <url>2021/03/26/interviewEXP-0326/</url>
+      
+        <content type="html"><![CDATA[<hr><h3 id="公司名称：忘记了呃呃呃"><a href="#公司名称：忘记了呃呃呃" class="headerlink" title="公司名称：忘记了呃呃呃"></a>公司名称：忘记了呃呃呃</h3><h4 id="面试形式：电话面试"><a href="#面试形式：电话面试" class="headerlink" title="面试形式：电话面试"></a>面试形式：电话面试</h4><h4 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h4><ol><li><p>介绍自己</p><blockquote><p>abaabaaba…….</p></blockquote></li><li><p>怎么学习前端的</p><blockquote><p>js用红宝书、css用案例、vue用网课和项目、代码能力用leetcode</p></blockquote></li><li><p>介绍css学习样例</p><blockquote><p>介绍了 swiper 以及 伪类</p></blockquote></li><li><p>vue的双向绑定</p><blockquote><p>介绍 MVVM 的原型 MVC，Model 和 View 在 MVVM 中是通过 VM(ViewModel) 来进行数据相互控制的，如果在某一边数据发生了改变，那么监听数据的 VM 也就是向另一边发出修改指定数据的命令，从而实现数据绑定</p></blockquote></li><li><p>如何实现 button 点击的涟漪特效</p><blockquote><p>使用伪类，伪类的大小、颜色(rgba)使用 js 来控制。当 button 的 click 事件发生后，涟漪特效函数会触发，动态修改伪类的大小(越来越大)，rgba 的 <code>a</code> 值，越来越透明，达到一种扩散最终消失的特效</p></blockquote></li><li><p>描述一道有意思的算法题</p><blockquote><p>最大回文子串 ——&gt; 使用对称扩散法，由于回文一定是对称的，所以只要从某一字符串元素向左右扩散，就可以得到以该元素为中心的最大回文子串并存储到回文子串数组中。最终遍历一次数组获得最大长度并且输出。</p></blockquote></li><li><p>我对于自己职业的规划</p><blockquote><p>不知道怎么回答，只是说了说自己眼中的前端的发展前景：多端开发、云函数、小程序</p></blockquote></li><li><p>有什么想问的</p><blockquote><p>balabalabalabalabalabalabalabalabalabala……</p></blockquote></li></ol><hr><h3 id="公司名称：博乐科技"><a href="#公司名称：博乐科技" class="headerlink" title="公司名称：博乐科技"></a>公司名称：博乐科技</h3><h4 id="面试形式：在线笔试"><a href="#面试形式：在线笔试" class="headerlink" title="面试形式：在线笔试"></a>面试形式：在线笔试</h4><h4 id="题目：-1"><a href="#题目：-1" class="headerlink" title="题目："></a>题目：</h4><ol><li><p>单选题： css 可以让元素不显示的方法</p><blockquote><p>overflow: hidden<br>opacity: 0<br>display: none</p></blockquote></li><li><p>多选题：css 选择器的优先级</p><blockquote><p>important &gt; 内联 &gt; id &gt; class &gt; 标签 | 伪类 | 属性选择 &gt; 伪对象 &gt; 继承 &gt; 通配符</p></blockquote></li><li><p>编程题：</p><blockquote><p><strong>leetcode</strong> 进制转换（<code>while</code>循环直至除净）<br><strong>leetcode</strong> 两天之间隔着那些天（使用<code>Date</code>对象转换成毫秒再转换成字符串）<br><strong>leetcode</strong> 最长回文子串（对称扩散法）<br><strong>leetcode</strong> 字符串处理——无限循环小数（寻找循环节进行处理）</p></blockquote></li></ol><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面经 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode Hot 100 - 3.无重复字符的最长子串</title>
       <link href="2021/03/26/leetcodeHot100-3/"/>
       <url>2021/03/26/leetcodeHot100-3/</url>
