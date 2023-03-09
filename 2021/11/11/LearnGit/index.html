@@ -159,7 +159,7 @@ var saveToLocal = {
 <p>这就足以体验分布式的好处了。首先，分布式版本控制系统根本没有“中央服务器”，每个人的电脑上都是一个完整的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上。既然每个人电脑上都有一个完整的版本库，那多个人如何协作呢？比方说你在自己电脑上改了文件A，你的同事也在他的电脑上改了文件A，这时，你们俩之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。</p>
 <p>和集中式版本控制系统相比，分布式版本控制系统的安全性要高很多，因为每个人电脑里都有完整的版本库，某一个人的电脑坏掉了不要紧，随便从其他人那里复制一个就可以了。而集中式版本控制系统的中央服务器要是出了问题，所有人都没法干活了。</p>
 <h3 id="Git-的安装"><a href="#Git-的安装" class="headerlink" title="Git 的安装"></a>Git 的安装</h3><p>鉴于我手头只有一台装有 win10 系统的工作本，所以我就只介绍一下 Windows 系统下的 Git 安装了，我们可以之间去<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">官网</a>下载安装包。</p>
-<img src="/.io//image-20211111151524855.png" alt="image-20211111151524855" style="zoom:150%;">
+<img src="image-20211111151524855.png" alt="image-20211111151524855" style="zoom:150%;">
 
 <p>当你开始菜单可以看到这几个小东西的时候，就说明你的 Git 已经安装好了。但是我们还需要进行一步操作，就是让你的 Git 有个标签，和这个世界上那么多的 Git 区分开来。让我们在命令行中输入下面两条命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">$ git config --global user.email <span class="string">&quot;example@email.com&quot;</span></span><br></pre></td></tr></table></figure>
@@ -167,10 +167,10 @@ var saveToLocal = {
 <p>配置完毕之后，你的 Git 也就可以见到其他 Git 的时候进行自我介绍了。</p>
 <p>这里的 <code>--global</code> 参数是指全局配置，你电脑所有的 Git 仓库都会用这个配置，当然也可以对不同的仓库进行不一样的配置</p>
 <h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><p>找个你喜欢的地方生成一个空目录，然后进去，然后初始化</p>
-<p><img src="/.io//image-20211111153125533.png"></p>
+<p><img src="image-20211111153125533.png"></p>
 <p>这样的话，这个 git_test 文件夹就变成了一个使用 Git 来进行版本管理的仓库了。随之变化的是该文件夹里面会有一个 .git 文件夹，这里面是 Git 用来跟踪管理版本的，咱尽量还是别去动它哈，咱动不起……</p>
 <p>有人说我看不见这个文件，你可以选择把 文件夹上方工具栏 -&gt; 查看 -&gt; 勾选 “隐藏的项目”</p>
-<p><img src="/.io//11/11/LearnGit/image-20211111153452014.png"></p>
+<p><img src="11/11/LearnGit/image-20211111153452014.png"></p>
 <p>又有人说为什么我在命令行里面用高级的 linux 命令 ls 却看不见这个文件夹呢？这是因为它是默认隐藏的，如果你想看的话，你可以试试更高级的 ls -ah 哦</p>
 <h3 id="把文件添加到版本库"><a href="#把文件添加到版本库" class="headerlink" title="把文件添加到版本库"></a>把文件添加到版本库</h3><p>首先这里再明确一下，所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git也不例外。版本控制系统可以告诉你每次的改动，比如在第5行加了一个单词“Linux”，在第8行删了一个单词“Windows”。而图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从100KB改成了120KB，但到底改了啥，版本控制系统不知道，也没法知道。</p>
 <p>不幸的是，Microsoft的Word格式是二进制格式，因此，版本控制系统是没法跟踪Word文件的改动的，前面我们举的例子只是为了演示，如果要真正使用版本控制系统，就要以纯文本方式编写文件。</p>
@@ -186,24 +186,24 @@ var saveToLocal = {
 
 <p>这个高级的点，是很多人常用的吧，一键就完事了</p>
 <p>如果你想知道现在 Git 都记下了什么文件，你可以使用一个 Git 命令来查询 <code>git status</code></p>
-<p><img src="/.io//11/11/LearnGit/image-20211111155123594.png"></p>
+<p><img src="11/11/LearnGit/image-20211111155123594.png"></p>
 <p>如果你想上传的东西都让 Git 记好了，那么你就可以让 Git 把你的这些东西上传到版本库里面去了</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git commit -m <span class="string">&quot;this is my first commit&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p><code>-m</code>后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录</p>
-<p><img src="/.io//11/11/LearnGit/image-20211111155308739.png"></p>
+<p><img src="11/11/LearnGit/image-20211111155308739.png"></p>
 <p><code>git commit</code> 命令执行成功后会告诉你，<code>1 file changed</code>：1个文件被改动（我们新添加的readme.txt文件）；<code>2 insertions</code>：插入了两行内容（readme.txt有两行内容）。</p>
 <h3 id="Git-怎么干活的"><a href="#Git-怎么干活的" class="headerlink" title="Git 怎么干活的"></a>Git 怎么干活的</h3><p>我们已经成功地添加并提交了一个readme.txt文件，现在，是时候继续工作了，于是，我们继续修改readme.txt文件，改成如下内容：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Git is a distributed version control system.</span><br><span class="line">Git is free software.</span><br></pre></td></tr></table></figure>
 
 <p>这个时候再查询一下<code>git status</code></p>
-<p><img src="/.io//11/11/LearnGit/image-20211111155633974.png"></p>
+<p><img src="11/11/LearnGit/image-20211111155633974.png"></p>
 <p>我们可以大概看出的意思就是，我改了这个文件，但是没有上传到 commit 里面。</p>
 <p>但如果是别人修改的呢？你要怎么才能知道别人进行了什么修改呢？我们就要学习一个新的 Git  命令了：<code>git diff</code>， diff 也就是 diffrence 嘛（疯狂炫耀扎实的小学英语基础）</p>
-<p><img src="/.io//11/11/LearnGit/image-20211111155956748.png"></p>
+<p><img src="11/11/LearnGit/image-20211111155956748.png"></p>
 <p>这里的话 减号 就是代表被修改的，加号 表示修改完的模样</p>
 <p>修改完了，那我们肯定得提交啊，add commit 一气呵成，我太牛了把这也</p>
-<p><img src="/.io//11/11/LearnGit/image-20211111162413594.png"></p>
+<p><img src="11/11/LearnGit/image-20211111162413594.png"></p>
 <p>nothing to commit, working tree clean</p>
 <p>完事了？下班！</p>
 <p>不对还没下班，还有几个神奇功能没告诉大家呢！</p>
@@ -218,15 +218,15 @@ var saveToLocal = {
 </ol>
 <p>那么我想回到上一个版本的话，我该怎么做呢？</p>
 <p>在 Git 中，使用 <code>HEAD</code> 代表当前版本，上一个版本是 <code>HEAD^</code> ，上上一个版本是 <code>HEAD^^</code> ，那么往前一百个呢？你当然可以选择使用100个 ^，但是这里我们更推荐使用 <code>HEAD~100</code> 。</p>
-<p><img src="/.io//11/11/LearnGit/image-20211111163714436.png"></p>
+<p><img src="11/11/LearnGit/image-20211111163714436.png"></p>
 <p>通过观察 id 号我们可以发现确实是实现了版本回退</p>
 <p>这个时候你如果说，我不想回退了，我反悔了，嘿嘿，这颗有点麻烦咯，如果你使用 <code>git log</code> 你会发现刚刚那个 commit 消失了！</p>
 <p>别急别急，我们往上滑，找到刚刚那条的 ID，deb08f…… 对对对，就是这个，看我来施展魔法</p>
-<p><img src="/.io//11/11/LearnGit/image-20211111164134782.png"></p>
+<p><img src="11/11/LearnGit/image-20211111164134782.png"></p>
 <p>嘿嘿！成功了</p>
 <p>这里的 id 是使用 SHA1 进行编码的时间戳，可以支持一个模糊搜索，但是建议至少四五位这样子，要不然可能会找出来两条 id 前缀一样的 commit 信息</p>
 <p>但是如果你关闭了电脑之后才后悔了咋办呢？别急，Git 还留了一手</p>
-<p><img src="/.io//11/11/LearnGit/image-20211111164435244.png"></p>
+<p><img src="11/11/LearnGit/image-20211111164435244.png"></p>
 <p>使用 <code>git reflog</code> 可以显示你在当前仓库执行的每一次命令</p>
 <h4 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h4><p>工作区与暂存区其实不是同级的。根据工作逻辑我们可以有 工作区 和 版本库 两个分类。工作区 指单个用户在电脑可以看到的目录，比如我们到目前为止一直在操作的 git_test 文件夹。与之相对的就是版本库，指当前这个多人协作的项目也就是工作区文件夹里面的 .git 文件夹，它就是当前项目的一个版本库。</p>
 <p>版本库里面主要包含两个部分 stage 和 master，stage 就是 暂存区 ，master 是 Git 自动创建的第一个分支，master 分支拥有一个叫做 HEAD 的头指针。</p>
@@ -265,26 +265,26 @@ var saveToLocal = {
 
 <p>把邮箱修改自己的邮箱地址，然后一路回车顺通无阻</p>
 <p>之后前往文件夹看一眼</p>
-<p><img src="/.io//11/11/LearnGit/image-20211111202537485.png"></p>
+<p><img src="11/11/LearnGit/image-20211111202537485.png"></p>
 <p>ok！get it！</p>
 <p><strong>第2步：连接 Github</strong></p>
 <p>登陆GitHub，打开“Account settings”，“SSH Keys”页面</p>
-<p><img src="/.io//11/11/LearnGit/image-20211111203406525.png"></p>
+<p><img src="11/11/LearnGit/image-20211111203406525.png"></p>
 <p>然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴<code>id_rsa.pub</code>文件的内容</p>
-<p><img src="/.io//11/11/LearnGit/image-20211111203517790.png"></p>
+<p><img src="11/11/LearnGit/image-20211111203517790.png"></p>
 <p>点“Add Key”，你就应该看到已经添加的Key</p>
-<p><img src="/.io//11/11/LearnGit/image-20211111203604350.png"></p>
-<h4 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h4><p><img src="/.io//11/11/LearnGit/image-20211111203820464.png"></p>
+<p><img src="11/11/LearnGit/image-20211111203604350.png"></p>
+<h4 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h4><p><img src="11/11/LearnGit/image-20211111203820464.png"></p>
 <p>一步一步走下来就是创建好了一个 github 上面的仓库了，2：仓库名称；3：仓库介绍</p>
-<p><img src="/.io//11/11/LearnGit/image-20211111203946085.png"></p>
+<p><img src="11/11/LearnGit/image-20211111203946085.png"></p>
 <p>我们可以看到两种方法添加远程仓库，第一种就是你本地啥都没有，第二种是你存在一个工作区</p>
 <p>如果从头走到现在，那么我们应该使用的是第二种方法</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 添加连接</span></span><br><span class="line">$ git remote add origin git@github.com:vychodlc/git_test.git </span><br><span class="line"><span class="comment"># 建立分支</span></span><br><span class="line">$ git branch -M main</span><br><span class="line"><span class="comment"># push!</span></span><br><span class="line">$ git push -u origin main</span><br></pre></td></tr></table></figure>
 
 <p>接下来我们就可以看到非常 nice 的界面了</p>
-<p><img src="/.io//11/11/LearnGit/image-20211111204832892.png"></p>
+<p><img src="11/11/LearnGit/image-20211111204832892.png"></p>
 <p>接下来我们刷新刚刚建立的仓库</p>
-<p><img src="/.io//11/11/LearnGit/image-20211111204924815.png"></p>
+<p><img src="11/11/LearnGit/image-20211111204924815.png"></p>
 <p>ok，就是这么简单！</p>
 <blockquote>
 <p>接下来对刚刚命令中的一些点来多说几句：</p>
